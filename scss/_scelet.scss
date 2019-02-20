@@ -1,0 +1,27 @@
+html, *{
+  margin: 0;
+  font-family: verdana;
+}
+body{
+  background: blue;
+}
+
+.wraper{
+  display: grid;
+}
+
+header{
+  grid-area: header;
+}
+main{
+  grid-area: main;
+}
+aside.one{
+  grid-area: aside1;
+}
+aside.two{
+  grid-area: aside2;
+}
+footer{
+  grid-area: footer;
+}
