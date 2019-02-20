@@ -1,27 +1,49 @@
+$glavna: #0f4d92;
+$textBoja: #fef8f1;
+
 html, *{
   margin: 0;
   font-family: verdana;
 }
 body{
-  background: blue;
+  background: #cdd9e6;
 }
 
 .wraper{
+  margin: 0 auto;
   display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(3, 1ft);
+  grid-auto-rows: minmax(100px, auto);
+  grid-template-areas:
+    "header header header"
+    "section section section"
+    "aside1 main main"
+    "aside2 main main"
+    "footer footer footer";
 }
 
 header{
   grid-area: header;
+  background: $glavna;
+}
+section{
+  grid-area: section;
+  background: $glavna;
 }
 main{
   grid-area: main;
+  background: $glavna;
 }
 aside.one{
   grid-area: aside1;
+  background: $glavna;
 }
 aside.two{
   grid-area: aside2;
+  background: $glavna;
 }
 footer{
   grid-area: footer;
+  background: $glavna;
 }
