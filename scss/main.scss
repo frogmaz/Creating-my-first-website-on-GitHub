@@ -16,7 +16,7 @@ main{
     overflow-y: auto;
     color: $textBoja;
     margin-bottom: 10px;
-    text-shadow: 1px 1px 1px black;
+    text-shadow: -1px 1px 1px black;
     p{
       width: 75%;
     }
@@ -34,5 +34,5 @@ aside.two{
   padding: 15px;
   overflow-y: auto;
   color: $textBoja;
-  text-shadow: 1px 1px 1px black;
+  text-shadow: -1px 1px 1px black;
 }
