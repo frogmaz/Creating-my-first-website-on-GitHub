@@ -5,7 +5,7 @@ html, *{
   font-family: verdana;
 }
 body{
-  background: #cdd9e6;
+  background: $textBoja;
 }
 
 .wraper{
@@ -24,25 +24,26 @@ body{
 
 header{
   grid-area: header;
-  background: $glavna;
+  background: url("../img/wall_pattern2.png"), $glavna;
+
 }
 section{
   grid-area: section;
-  background: $glavna;
+  background: url("../img/wall_pattern2.png"), $glavna;
 }
 main{
   grid-area: main;
-  background: $glavna;
+  background: url("../img/wall_pattern2.png"), $glavna;
 }
 aside.one{
   grid-area: aside1;
-  background: $glavna;
+  background: url("../img/wall_pattern2.png"), $glavna;
 }
 aside.two{
   grid-area: aside2;
-  background: $glavna;
+  background: url("../img/wall_pattern2.png"), $glavna;
 }
 footer{
   grid-area: footer;
-  background: $glavna;
+  background: url("../img/wall_pattern2.png"), $glavna;
 }

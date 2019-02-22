@@ -2,3 +2,37 @@
 @import "_scelet";
 @import "_horisontal_slider";
 @import "_variables";
+
+main{
+  display: flex;
+  background: url("../img/wall_pattern2.png"),
+    linear-gradient(90deg, $glavna 40%, transparent 90%),
+    url("https://1funny.com/wp-content/uploads/2010/07/bitten.jpg") no-repeat;
+  background-position: 100% 0%;
+  max-height: 370px;
+  padding: 15px;
+  padding-right: 0;
+  div{
+    overflow-y: auto;
+    color: $textBoja;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 1px black;
+    p{
+      width: 75%;
+    }
+  }
+}
+
+aside.one{
+  background: url("../img/wall_pattern2.png"),
+    linear-gradient(-150deg, transparent 50%, $glavna 95%),
+    url("http://bestanimations.com/Money/money-animated-gif-4.gif") no-repeat center;
+  height: 140px;
+}
+aside.two{
+  max-height: 225px;
+  padding: 15px;
+  overflow-y: auto;
+  color: $textBoja;
+  text-shadow: 1px 1px 1px black;
+}
