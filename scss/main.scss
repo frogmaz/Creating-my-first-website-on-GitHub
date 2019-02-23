@@ -3,6 +3,46 @@
 @import "_horisontal_slider";
 @import "_variables";
 
+section{
+  height: 500px;
+  overflow: hidden;
+  .swiper-container{
+    height: 500px;
+    overflow-x: auto;
+    .swiper-wraper{
+      width: 1824px;
+      .swiper-card{
+        background: grey;
+
+        height: 450px;
+        width: 300px;
+        margin: 20px 30px;
+        display: inline-block;
+        border-radius: 5px;
+        overflow: hidden;
+        .swiper-img{
+          height: 200px;
+          overflow: hidden;
+          position: relative;
+          img{
+            position: absolute;
+            width: 120%;
+            left: -14%;
+
+          }
+        }
+        .swiper-text{
+          height: 180px;
+
+        }
+        .swiper-button{
+          height: 70px;
+        }
+      }
+    }
+  }
+}
+
 main{
   display: flex;
   background: url("../img/wall_pattern2.png"),
