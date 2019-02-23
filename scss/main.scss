@@ -13,11 +13,11 @@ section{
       width: 1824px;
       .swiper-card{
         background: grey;
-        box-shadow: -2px 2px 15px black;
         height: 450px;
         width: 300px;
         margin: 15px 30px;
         display: inline-block;
+        box-shadow: -2px 2px 15px black;
         border-radius: 5px;
         overflow: hidden;
         .swiper-img{
@@ -100,4 +100,78 @@ aside.two{
   color: $textBoja;
   text-shadow: -1px 1px 1px black;
   text-align: justify;
+}
+
+footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100px;
+
+  .animLogo{
+    background: url("../img/bank.png") no-repeat center;
+    background-size: auto 120px;
+    background-position: left top;
+    width: 200px;
+    position: relative;
+    overflow: hidden;
+    img{
+      position: absolute;
+      height: 40px;
+      top: 55px;
+      animation-name: ica;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      &:nth-of-type(1){
+        left: 10px;
+
+      }
+      &:nth-of-type(2){
+        left: 30px;
+        animation-delay: 150ms;
+      }
+      &:nth-of-type(3){
+        left: 65px;
+        animation-delay: 300ms;
+      }
+    }
+  }
+  .footerLinks{
+    // flex-grow: 1;
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 40%;
+    margin-right: 10%;
+
+    .footerButton{
+      flex-grow: 1;
+      height: auto;
+      max-width: 45%;
+      padding: 15px;
+      align-self: center;
+      text-align: center;
+      color: $textBoja;
+      font-size: 14px;
+      text-shadow: -1px 1px 1px black;
+      &:hover{
+        text-decoration: underline;
+      }
+
+    }
+  }
+}
+
+@keyframes ica {
+  0%{
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  50%, 60%{
+    transform: translateX(0px);
+    opacity: 1;
+  }
+  100%{
+    transform: translateX(-300px);
+  }
 }
