@@ -30,11 +30,11 @@ header{
         align-items: center;
         padding: 10px 30px;
         flex: 1 1 0;
-        background: linear-gradient(60deg, $textBoja 3%, transparent 60%);
+        background: linear-gradient(60deg, $textBoja -20%, transparent 80%);
         transition: 150ms;
         &:hover{
-          background: linear-gradient(60deg, $textBoja 10%, transparent 80%);
-          border-radius: 0 0 0 40%;
+          background: linear-gradient(60deg, $textBoja 0%, transparent 90%);
+          border-radius: 0 0 0 25px;
         }
         a{
           text-decoration: none;

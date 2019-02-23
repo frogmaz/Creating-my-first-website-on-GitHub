@@ -13,7 +13,7 @@ section{
       width: 1824px;
       .swiper-card{
         background: grey;
-        box-shadow: -1px 1px 1px black;
+        box-shadow: -2px 2px 15px black;
         height: 450px;
         width: 300px;
         margin: 15px 30px;
@@ -34,8 +34,10 @@ section{
         .swiper-text{
           height: 170px;
           color: $textBoja;
+          text-align: justify;
           text-shadow: -1px 1px 1px black;
-          padding: 10px;
+          padding: 15px;
+          padding-bottom: 0;
         }
         .swiper-button{
           height: 80px;
@@ -53,6 +55,11 @@ section{
             box-shadow: -1px 1px 1px black;
             color: $textBoja;
             text-shadow: -1px 1px 1px black;
+            transition: 100ms;
+            &:hover{
+              box-shadow: 0 0 10px $zlatna;
+              text-shadow: -1px 1px 4px black;
+            }
           }
         }
       }
@@ -92,4 +99,5 @@ aside.two{
   overflow-y: auto;
   color: $textBoja;
   text-shadow: -1px 1px 1px black;
+  text-align: justify;
 }
