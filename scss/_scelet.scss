@@ -11,7 +11,7 @@ body{
 .wraper{
   margin: 0 auto;
   display: grid;
-  grid-gap: 5px;
+  // grid-gap: 5px;
   grid-template-columns: repeat(3, 1ft);
   grid-auto-rows: minmax(100px, auto);
   grid-template-areas:
@@ -45,5 +45,5 @@ aside.two{
 }
 footer{
   grid-area: footer;
-  background: url("../img/wall_pattern2.png"), $glavna;
+  background: url("../img/wall_pattern2.png"), linear-gradient(10deg, grey,$glavna);
 }

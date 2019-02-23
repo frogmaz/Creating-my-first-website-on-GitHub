@@ -74,8 +74,7 @@ main{
     url("https://1funny.com/wp-content/uploads/2010/07/bitten.jpg") no-repeat;
   background-position: 100% 0%;
   max-height: 370px;
-  padding: 15px;
-  padding-right: 0;
+  padding: 15px 0 15px 30px;
   div{
     overflow-y: auto;
     color: $textBoja;
@@ -137,7 +136,6 @@ footer{
     }
   }
   .footerLinks{
-    // flex-grow: 1;
     flex-direction: row;
     display: flex;
     flex-wrap: wrap;
