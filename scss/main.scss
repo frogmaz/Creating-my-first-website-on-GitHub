@@ -6,6 +6,36 @@
 section{
   height: 550px;
   overflow: hidden;
+  position: relative;
+  .swipeArrow{
+    position: absolute;
+    background: grey;
+    color: $textBoja;
+    width: 55px;
+    height: 55px;
+    text-align: center;
+    border-radius: 50%;
+    border: 3px solid $textBoja;
+    box-shadow: -3px 3px 10px black;
+    text-shadow: -1px 1px 1px black;
+    font-weight: bold;
+    font-size: 40px;
+    z-index: 1;
+    top: 45%;
+    &.left{
+      left: 5%;
+
+    }
+    &.right{
+      left: 90%;
+    }
+    opacity: 0.7;
+    transition: 150ms;
+    transition-property: opacity;
+    &:hover{
+      opacity: 1;
+    }
+  }
   .swiper-container{
     height: 550px;
     overflow-x: auto;
@@ -56,6 +86,7 @@ section{
             color: $textBoja;
             text-shadow: -1px 1px 1px black;
             transition: 100ms;
+            transition-property: box-shadow, text-shadow;
             &:hover{
               box-shadow: 0 0 10px $zlatna;
               text-shadow: -1px 1px 4px black;
@@ -168,6 +199,7 @@ footer{
   50%, 60%{
     transform: translateX(0px);
     opacity: 1;
+    filter: drop-shadow(-2px 2px 2px black);
   }
   100%{
     transform: translateX(-300px);
