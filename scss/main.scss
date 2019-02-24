@@ -24,7 +24,6 @@ section{
     top: 45%;
     &.left{
       left: 5%;
-
     }
     &.right{
       left: 90%;
@@ -40,7 +39,9 @@ section{
     height: 550px;
     overflow-x: auto;
     .swiper-wraper{
-      width: 1824px;
+      width: 2200px;
+      display: flex;
+      justify-content: center;
       .swiper-card{
         display: inline-block;
         height: 450px;
