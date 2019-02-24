@@ -4,19 +4,19 @@
 @import "_variables";
 
 section{
-  height: 500px;
+  height: 550px;
   overflow: hidden;
   .swiper-container{
-    height: 500px;
+    height: 550px;
     overflow-x: auto;
     .swiper-wraper{
       width: 1824px;
       .swiper-card{
-        background: grey;
+        display: inline-block;
         height: 450px;
         width: 300px;
-        margin: 15px 30px;
-        display: inline-block;
+        background: grey;
+        margin: 45px 30px 0 30px;
         box-shadow: -2px 2px 15px black;
         border-radius: 5px;
         overflow: hidden;
@@ -81,20 +81,20 @@ main{
     margin-bottom: 10px;
     text-shadow: -1px 1px 1px black;
     p{
-      width: 75%;
+      width: 70%;
     }
   }
 }
 
 aside.one{
   background: url("../img/wall_pattern2.png"),
-    linear-gradient(-150deg, transparent 50%, $glavna 95%),
+    linear-gradient(-175deg, transparent 40%, $glavna 90%),
     url("http://bestanimations.com/Money/money-animated-gif-4.gif") no-repeat center;
   height: 140px;
 }
 aside.two{
   max-height: 225px;
-  padding: 15px;
+  padding: 15px 5px 15px 25px;
   overflow-y: auto;
   color: $textBoja;
   text-shadow: -1px 1px 1px black;
