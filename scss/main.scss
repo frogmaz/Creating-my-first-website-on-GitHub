@@ -1,6 +1,5 @@
 @import "_navbar";
 @import "_scelet";
-@import "_horisontal_slider";
 @import "_variables";
 
 section{
@@ -23,22 +22,23 @@ section{
     font-size: 40px;
     z-index: 1;
     top: 45%;
-    &.left{
+    &.goLeft{
       left: 5%;
     }
-    &.right{
+    &.goRight{
       left: 90%;
     }
-    opacity: 0.7;
+    opacity: 0.8;
     transition: 150ms;
     transition-property: opacity;
-    &:hover{
-      opacity: 1;
-    }
   }
   .swiper-container{
+    position: absolute;
     height: 550px;
-    overflow-x: auto;
+    overflow-x: hidden;
+    transition: 490ms;
+    transition-property: left;
+    left: 0px;
     .swiper-wraper{
       width: 2000px;
       display: flex;
