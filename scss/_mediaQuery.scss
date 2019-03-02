@@ -1,0 +1,22 @@
+@media only screen and (max-width: 840px){
+  .wraper{
+    grid-template-columns: repeat(2, 1ft);
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas:
+      "header header"
+      "section section"
+      "main main"
+      "main main"
+      "asideOne asideTwo"
+      "footer footer";
+  }
+  aside{
+    height: 140px;
+  }
+}
+
+// @media only screen and (max-width: 840px){
+//   #buttonArea nav{
+//     flex-direction: column;
+//   }
+// }

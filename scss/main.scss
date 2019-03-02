@@ -26,7 +26,7 @@ section{
       left: 5%;
     }
     &.goRight{
-      left: 90%;
+      right: 7%;
     }
     opacity: 0.8;
     transition: 150ms;
@@ -36,7 +36,7 @@ section{
     position: absolute;
     height: 550px;
     overflow-x: hidden;
-    transition: 490ms;
+    transition: 420ms;
     transition-property: left;
     left: 0px;
     .swiper-wraper{
@@ -120,13 +120,30 @@ main{
   }
 }
 
-aside.one{
-  background: url("../img/wall_pattern2.png"),
-    linear-gradient(-175deg, transparent 40%, $glavna 90%),
-    url("http://bestanimations.com/Money/money-animated-gif-4.gif") no-repeat center;
+aside #one{
+  position: relative;
+  overflow: hidden;
   height: 140px;
+  img{
+    top: 100px;
+    width: 110%;
+    display: block;
+    height: 200%;
+    transform: rotateX(180deg);
+  }
+  &::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: url("../img/wall_pattern2.png"),
+      linear-gradient(7deg, transparent 40%, $glavna 85%);
+  }
 }
-aside.two{
+aside #two{
+  background: black;
   max-height: 225px;
   padding: 15px;
   overflow-y: auto;
@@ -209,3 +226,6 @@ footer{
     transform: translateX(-300px);
   }
 }
+
+
+@import "_mediaQuery.scss";

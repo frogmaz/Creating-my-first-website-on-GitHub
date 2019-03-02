@@ -5,43 +5,36 @@ html, *{
   font-family: verdana;
 }
 body{
-  background: $textBoja;
+  background: url("../img/wall_pattern2.png"), $glavna;
 }
 
 .wraper{
   margin: 0 auto;
   display: grid;
-  // grid-gap: 5px;
   grid-template-columns: repeat(3, 1ft);
   grid-auto-rows: minmax(100px, auto);
   grid-template-areas:
     "header header header"
     "section section section"
-    "aside1 main main"
-    "aside2 main main"
+    "asideOne main main"
+    "asideTwo main main"
     "footer footer footer";
 }
 
 header{
   grid-area: header;
-  background: url("../img/wall_pattern2.png"), $glavna;
-
 }
 section{
   grid-area: section;
-  background: url("../img/wall_pattern2.png"), $glavna;
 }
 main{
   grid-area: main;
-  background: url("../img/wall_pattern2.png"), $glavna;
 }
-aside.one{
-  grid-area: aside1;
-  background: url("../img/wall_pattern2.png"), $glavna;
+aside #one{
+  grid-area: asideOne;
 }
-aside.two{
-  grid-area: aside2;
-  background: url("../img/wall_pattern2.png"), $glavna;
+aside #two{
+  grid-area: asideTwo;
 }
 footer{
   grid-area: footer;
