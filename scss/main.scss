@@ -120,7 +120,7 @@ main{
   }
 }
 
-aside #one{
+#one{
   position: relative;
   overflow: hidden;
   height: 140px;
@@ -142,8 +142,7 @@ aside #one{
       linear-gradient(7deg, transparent 40%, $glavna 85%);
   }
 }
-aside #two{
-  background: black;
+#two{
   max-height: 225px;
   padding: 15px;
   overflow-y: auto;

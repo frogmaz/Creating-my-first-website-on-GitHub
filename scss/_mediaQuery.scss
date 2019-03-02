@@ -1,4 +1,4 @@
-@media only screen and (max-width: 840px){
+@media only screen and (max-width: 950px){
   .wraper{
     grid-template-columns: repeat(2, 1ft);
     grid-auto-rows: minmax(100px, auto);
@@ -10,13 +10,34 @@
       "asideOne asideTwo"
       "footer footer";
   }
-  aside{
-    height: 140px;
+  #two{
+    height: 110px;
+    //s padding-om bude 140
   }
 }
 
-// @media only screen and (max-width: 840px){
-//   #buttonArea nav{
-//     flex-direction: column;
-//   }
-// }
+@media only screen and (max-width: 830px){
+  header {
+    position: relative;
+    #buttonArea {
+      #hamburger{
+      display: flex;
+     }
+      nav{
+        // display: none;
+        position: absolute;
+        flex-direction: column;
+        top: 100%;
+        left: 10%;
+        right: 0;
+        z-index: 1;
+        a{
+          display: block;
+          li br{
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
