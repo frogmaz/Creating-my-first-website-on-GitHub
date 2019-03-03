@@ -40,7 +40,7 @@ section{
     transition-property: left;
     left: 0px;
     .swiper-wraper{
-      width: 2000px;
+      width: 1900px;
       display: flex;
       justify-content: center;
       .swiper-card{
@@ -161,7 +161,7 @@ footer{
     background: url("../img/bank.png") no-repeat center;
     background-size: auto 120px;
     background-position: left top;
-    width: 200px;
+    min-width: 200px;
     position: relative;
     overflow: hidden;
     img{

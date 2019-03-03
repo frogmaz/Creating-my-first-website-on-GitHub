@@ -25,13 +25,11 @@ header{
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      transition: 300ms;
-      transition-property: width,height,margin,box-shadow;
       &:hover{
         cursor: pointer;
         .crta{
-          width: 70px;
-          height: 10;
+          width: 65px;
+          height: 9px;
           margin: 6px;
           box-shadow: -1px 3px 8px rgba(0,0,0,.7);
         }

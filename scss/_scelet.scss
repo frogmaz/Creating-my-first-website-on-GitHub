@@ -10,6 +10,7 @@ body{
 
 .wraper{
   margin: 0 auto;
+  min-width: 440px;
   display: grid;
   grid-template-columns: repeat(3, 1ft);
   grid-auto-rows: minmax(100px, auto);
