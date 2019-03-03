@@ -6,9 +6,9 @@ header {
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   height: 105px; }
   header #logo {
     width: 222px;
@@ -25,9 +25,41 @@ header {
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
     -webkit-box-flex: 1;
     -ms-flex: 1 1 0px;
     flex: 1 1 0; }
+    header #buttonArea #hamburger {
+      display: none;
+      -webkit-box-flex: 1;
+      -ms-flex: 1 1 100px;
+      flex: 1 1 100px;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      header #buttonArea #hamburger:hover {
+        cursor: pointer; }
+        header #buttonArea #hamburger:hover .crta {
+          width: 65px;
+          height: 9px;
+          margin: 6px;
+          -webkit-box-shadow: -1px 3px 8px rgba(0, 0, 0, 0.7);
+          box-shadow: -1px 3px 8px rgba(0, 0, 0, 0.7); }
+      header #buttonArea #hamburger .crta {
+        background: #fef8f1;
+        width: 60px;
+        height: 8px;
+        margin: 4px;
+        border-radius: 3px; }
     header #buttonArea nav {
       -webkit-box-flex: 1;
       -ms-flex: 1 1 50%;
@@ -75,6 +107,8 @@ header {
           white-space: nowrap;
           color: #fef8f1;
           text-shadow: -1px 1px 1px black; }
+          header #buttonArea nav a li br {
+            display: none; }
     header #buttonArea #login {
       background: #ffd700;
       width: 100px;
@@ -120,50 +154,46 @@ html, * {
   font-family: verdana; }
 
 body {
-  background: #fef8f1; }
+  background: url("../img/wall_pattern2.png"), #0f4d92; }
 
 .wraper {
   margin: 0 auto;
+  min-width: 440px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1ft)[3];
   grid-template-columns: repeat(3, 1ft);
   grid-auto-rows: minmax(100px, auto);
-  grid-template-areas: "header header header" "section section section" "aside1 main main" "aside2 main main" "footer footer footer"; }
+  grid-template-areas: "header header header" "section section section" "asideOne main main" "asideTwo main main" "footer footer footer"; }
 
 header {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
-  grid-area: header;
-  background: url("../img/wall_pattern2.png"), #0f4d92; }
+  grid-area: header; }
 
 section {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
-  grid-area: section;
-  background: url("../img/wall_pattern2.png"), #0f4d92; }
+  grid-area: section; }
 
 main {
   -ms-grid-row: 3;
   -ms-grid-row-span: 2;
   -ms-grid-column: 2;
   -ms-grid-column-span: 2;
-  grid-area: main;
-  background: url("../img/wall_pattern2.png"), #0f4d92; }
+  grid-area: main; }
 
-aside.one {
+aside #one {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
-  grid-area: aside1;
-  background: url("../img/wall_pattern2.png"), #0f4d92; }
+  grid-area: asideOne; }
 
-aside.two {
+aside #two {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
-  grid-area: aside2;
-  background: url("../img/wall_pattern2.png"), #0f4d92; }
+  grid-area: asideTwo; }
 
 footer {
   -ms-grid-row: 5;
@@ -205,20 +235,20 @@ section {
     section .swipeArrow.goLeft {
       left: 5%; }
     section .swipeArrow.goRight {
-      left: 90%; }
+      right: 5%; }
   section .swiper-container {
     position: absolute;
     height: 550px;
     overflow-x: hidden;
-    -webkit-transition: 490ms;
-    -o-transition: 490ms;
-    transition: 490ms;
+    -webkit-transition: 420ms;
+    -o-transition: 420ms;
+    transition: 420ms;
     -webkit-transition-property: left;
     -o-transition-property: left;
     transition-property: left;
     left: 0px; }
     section .swiper-container .swiper-wraper {
-      width: 2000px;
+      width: 1900px;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -307,13 +337,29 @@ main {
     main div p {
       width: 70%; }
 
-aside.one {
-  background: url("../img/wall_pattern2.png"), -webkit-linear-gradient(265deg, transparent 40%, #0f4d92 90%), url("http://bestanimations.com/Money/money-animated-gif-4.gif") no-repeat center;
-  background: url("../img/wall_pattern2.png"), -o-linear-gradient(265deg, transparent 40%, #0f4d92 90%), url("http://bestanimations.com/Money/money-animated-gif-4.gif") no-repeat center;
-  background: url("../img/wall_pattern2.png"), linear-gradient(-175deg, transparent 40%, #0f4d92 90%), url("http://bestanimations.com/Money/money-animated-gif-4.gif") no-repeat center;
+#one {
+  position: relative;
+  overflow: hidden;
   height: 140px; }
+  #one img {
+    top: 100px;
+    width: 110%;
+    display: block;
+    height: 200%;
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg); }
+  #one::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: url("../img/wall_pattern2.png"), -webkit-linear-gradient(83deg, transparent 40%, #0f4d92 85%);
+    background: url("../img/wall_pattern2.png"), -o-linear-gradient(83deg, transparent 40%, #0f4d92 85%);
+    background: url("../img/wall_pattern2.png"), linear-gradient(7deg, transparent 40%, #0f4d92 85%); }
 
-aside.two {
+#two {
   max-height: 225px;
   padding: 15px;
   overflow-y: auto;
@@ -337,7 +383,7 @@ footer {
     background: url("../img/bank.png") no-repeat center;
     background-size: auto 120px;
     background-position: left top;
-    width: 200px;
+    min-width: 200px;
     position: relative;
     overflow: hidden; }
     footer .animLogo img {
@@ -419,3 +465,58 @@ footer {
   100% {
     -webkit-transform: translateX(-300px);
     transform: translateX(-300px); } }
+
+@media only screen and (max-width: 950px) {
+  .wraper {
+    -ms-grid-columns: (1ft)[2];
+    grid-template-columns: repeat(2, 1ft);
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas: "header header" "section section" "main main" "main main" "asideOne asideTwo" "footer footer"; }
+  #two {
+    height: 110px; }
+  header {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2; }
+  section {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2; }
+  main {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2; }
+  aside #one {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1; }
+  aside #two {
+    -ms-grid-row: 5;
+    -ms-grid-column: 2; }
+  footer {
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2; } }
+
+@media only screen and (max-width: 830px) {
+  header {
+    position: relative; }
+    header #buttonArea #hamburger {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+    header #buttonArea nav {
+      display: none;
+      position: absolute;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      top: 100%;
+      left: 10%;
+      right: 0;
+      z-index: 1; }
+      header #buttonArea nav a {
+        display: block; }
+        header #buttonArea nav a li br {
+          display: block; } }

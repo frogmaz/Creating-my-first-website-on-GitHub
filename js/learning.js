@@ -11,7 +11,7 @@ arrows.addEventListener('click', function(e){
     document.querySelector('.goRight').style.opacity = "0.8";
     //ovako osvezavam suprotnu strelicu kad ostane bleda
     return;
-  } else if(e.target.classList.contains('goRight') && sliderStyleLeft > -1050){
+  } else if(e.target.classList.contains('goRight') && sliderStyleLeft > -1350){ //malo lufta
     slider.style.left = (parseInt(sliderStyleLeft) - 300) + 'px';
     document.querySelector('.goLeft').style.opacity = "0.8";
     return;
@@ -21,3 +21,26 @@ arrows.addEventListener('click', function(e){
 
 //NAPOMENA: nisam imao vremena da provalim kako da ovo menjanje OPACITY-ja ne
 //          utice na vidljivost elementa tokom ":hover" efekta
+
+
+//padajuci meni
+const hamburger = document.querySelector("#hamburger");
+const meni = document.querySelector("#buttonArea nav");
+
+hamburger.addEventListener('click',function(e){
+  const meniDisplay = window.getComputedStyle(meni).getPropertyValue("display");
+  if(meniDisplay == "none"){
+    meni.style.display = "flex";
+  }else if(meniDisplay == "flex"){
+    meni.style.display = "none";
+  }
+})
+//problem sto meni (ako smo ga ijednom koristili) nestaje zajedno s hamburgerom kada se vratimo na desktop sirinu s mobilne
+
+// const btnArea = document.querySelector("#buttonArea");
+//
+// btnArea.onresize = function(e){
+  //   if(btn.offsetWidth > 591){
+    //     meni.style.display = "flex";
+    //   }
+    // }
